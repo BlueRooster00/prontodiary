@@ -1,0 +1,51 @@
+{
+  "project_info": {
+    "project_number": "696062477495",
+    "firebase_url": "https://prontodiary-ac2da.firebaseio.com",
+    "project_id": "prontodiary-ac2da",
+    "storage_bucket": "prontodiary-ac2da.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696062477495:android:2dad04924fbfc47e",
+        "android_client_info": {
+          "package_name": "com.okason.prontodiary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "696062477495-sf5094ucs6pasl9h8753tur8opt066ln.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.okason.prontodiary",
+            "certificate_hash": "0E4C03D8AECBAC0B3AC3361D242681DFEDFEDC64"
+          }
+        },
+        {
+          "client_id": "696062477495-98et4nnp3crecukilh8i6g4uglnr43lc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "696062477495-98et4nnp3crecukilh8i6g4uglnr43lc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
