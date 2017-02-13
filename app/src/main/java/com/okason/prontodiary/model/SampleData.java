@@ -29,7 +29,7 @@ public class SampleData {
     }
 
 
-        public static List<JournalEntry> getSampleNotes() {
+        public static List<JournalEntry> getSampleJournalEntries() {
 
         List<JournalEntry> journalEnrties = new ArrayList<>();
         //create the dummy journal
