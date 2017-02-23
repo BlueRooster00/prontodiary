@@ -15,6 +15,8 @@ import com.amulyakhare.textdrawable.TextDrawable;
 import com.amulyakhare.textdrawable.util.ColorGenerator;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -33,6 +35,8 @@ import butterknife.ButterKnife;
 public class JournalListFragment extends Fragment {
 
     private DatabaseReference mDatabase;
+    private FirebaseAuth mFirebaseAuth;
+    private FirebaseUser mFirebaseUser;
     private DatabaseReference journalCloudEndPoint;
     private DatabaseReference tagCloudEndPoint;
 
@@ -54,9 +58,14 @@ public class JournalListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        mDatabase = FirebaseDatabase.getInstance().getReference();
-        journalCloudEndPoint = mDatabase.child("journalentris");
-        tagCloudEndPoint = mDatabase.child("tags");
+        mFirebaseAuth = FirebaseAuth.getInstance();
+        mFirebaseUser = mFirebaseAuth.getCurrentUser();mDatabase = FirebaseDatabase.getInstance().getReference();
+
+
+        journalCloudEndPoint =  mDatabase.child("/users/" + mFirebaseUser.getUid() + "journalentries");
+        tagCloudEndPoint =  mDatabase.child("/users/" + mFirebaseUser.getUid() + "tags");
+
+
 
         // Inflate the layout for this fragment
         mRootView = inflater.inflate(R.layout.fragment_journal_list, container, false);
